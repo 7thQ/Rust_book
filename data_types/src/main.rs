@@ -31,6 +31,13 @@ fn main() {
     let tup = (500, 4.1, 1);
     let ( _x, _y, _z) = tup;
     println!("the values of y in this tuple is: {_y}");
+
+    let x: (i32, f64, &str, char ) = ( 42 , 5.4 , "53 ", '😻'  );
+    let a = x.0;
+    let b = x.1;
+    let c: u32 = x.2.trim().parse().expect("not a valid number");
+
+    println!("tuple indexing: {a}, {b}, {c}, {}", x.3);
     
 
     println!("{}: {} {}, {} {}, {} {}, {} {}, {} {}, {} {}", 
